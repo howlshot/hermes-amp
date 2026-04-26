@@ -1,6 +1,6 @@
 # Hermes Amp
 
-Late-90s media-player dashboard chrome for Hermes. Hermes Amp is intentionally Winamp-adjacent without copying Winamp branding or assets: compact snapped windows, graphite bevels, LCD readouts, playlist-style sessions, tiny status LEDs, scanlines, and a functional data-mixer equalizer.
+Hermes Amp turns the Hermes dashboard into a late-90s audio-player cockpit: compact snapped windows, graphite bevels, LCD readouts, playlist-style sessions, tiny status LEDs, scanlines, and a functional data-mixer equalizer.
 
 The goal is not just a visual reskin. The Sessions page becomes a usable agent cockpit where the playlist, inspector, transport controls, meters, logs, and visualizer all map to Hermes dashboard data.
 
@@ -44,7 +44,7 @@ If there is no matching live data yet, the chart switches to a mixer-driven prev
 
 ## Session Workspace
 
-The Sessions page is replaced by a Winamp-style workspace: main player, selectable playlist, functional equalizer, signal meters, cron deck, log tail, and a session inspector. The inspector can resume a session, load a transcript preview, and delete a session after explicit browser confirmation.
+The Sessions page is replaced by a media-player workspace: main player, selectable playlist, functional equalizer, signal meters, cron deck, log tail, and a session inspector. The inspector can resume a session, load a transcript preview, and delete a session after explicit browser confirmation.
 
 The plugin overrides `/sessions`, so the Sessions nav item becomes the Hermes Amp workspace. The underlying data still comes from Hermes dashboard APIs.
 
@@ -106,7 +106,5 @@ Live checks:
 ## Design Notes
 
 The skin should feel nostalgic, but still usable. The theme owns the global dashboard chrome; the plugin owns functional HUD details. That separation keeps the contest entry drop-in and avoids forking Hermes.
-
-Hermes Amp uses original CSS and dashboard SDK code only. It does not bundle Winamp images, skins, logos, or proprietary assets.
 
 The dashboard extension reference is here: https://hermes-agent.nousresearch.com/docs/user-guide/features/extending-the-dashboard

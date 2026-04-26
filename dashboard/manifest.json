@@ -1,7 +1,7 @@
 {
   "name": "hermes-amp",
   "label": "Hermes Amp",
-  "description": "Late-90s media-player dashboard chrome for Hermes.",
+  "description": "A late-90s audio-player cockpit for Hermes.",
   "icon": "Activity",
   "version": "0.2.9",
   "tab": {
