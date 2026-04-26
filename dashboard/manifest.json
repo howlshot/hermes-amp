@@ -3,7 +3,7 @@
   "label": "Hermes Amp",
   "description": "Late-90s media-player dashboard chrome for Hermes.",
   "icon": "Activity",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "tab": {
     "path": "/hermes-amp",
     "position": "end",
@@ -20,6 +20,6 @@
     "logs:top",
     "sessions:top"
   ],
-  "entry": "dist/index.amp8.js",
-  "css": "dist/style.amp8.css"
+  "entry": "dist/index.amp9.js",
+  "css": "dist/style.amp9.css"
 }

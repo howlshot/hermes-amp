@@ -1082,7 +1082,12 @@
           var value = mixValue(mix, band.key);
           return e(
             "label",
-            { className: "hermes-amp-eq-slider", key: band.key, title: band.label + " weight " + value + "%" },
+            {
+              className: "hermes-amp-eq-slider",
+              key: band.key,
+              title: band.label + " weight " + value + "%",
+              style: { "--mix-value": String(value) }
+            },
             e("input", {
               className: "hermes-amp-eq-range",
               type: "range",

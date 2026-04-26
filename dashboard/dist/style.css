@@ -657,43 +657,68 @@
 }
 
 .hermes-amp-eq-slider {
+  position: relative;
   display: grid;
-  grid-template-rows: 1fr auto auto;
+  grid-template-rows: 82px auto auto;
   gap: 2px;
   justify-items: center;
   min-width: 0;
+  padding-top: 1px;
+}
+
+.hermes-amp-eq-slider::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 50%;
+  z-index: 0;
+  width: 8px;
+  height: 80px;
+  transform: translateX(-50%);
+  border: 1px solid rgba(126, 190, 255, 0.24);
+  background:
+    linear-gradient(180deg, rgba(255, 86, 106, 0.34), rgba(255, 228, 92, 0.3) 45%, rgba(141, 255, 106, 0.28)),
+    #050609;
+  box-shadow:
+    inset 0 0 7px rgba(0, 0, 0, 0.9),
+    0 0 0 1px rgba(0, 0, 0, 0.62);
+  pointer-events: none;
+}
+
+.hermes-amp-eq-slider::after {
+  content: "";
+  position: absolute;
+  top: calc(4px + (200 - var(--mix-value, 100)) * 0.37px);
+  left: 50%;
+  z-index: 1;
+  width: 16px;
+  height: 6px;
+  transform: translateX(-50%);
+  border: 1px solid rgba(0, 0, 0, 0.78);
+  background: linear-gradient(180deg, #ffe878, #c78518 52%, #4c2e07);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.52),
+    0 0 5px rgba(255, 216, 106, 0.22);
+  pointer-events: none;
 }
 
 .hermes-amp-eq-range {
-  width: 16px;
-  height: 80px;
+  position: absolute;
+  top: 1px;
+  left: 50%;
+  z-index: 2;
+  width: 26px;
+  height: 82px;
   margin: 0;
+  transform: translateX(-50%);
+  opacity: 0;
   cursor: pointer;
   accent-color: #70c9ff;
   writing-mode: vertical-lr;
   direction: rtl;
 }
 
-.hermes-amp-eq-range::-webkit-slider-runnable-track {
-  width: 8px;
-  border: 1px solid rgba(126, 190, 255, 0.22);
-  background:
-    linear-gradient(180deg, rgba(255, 86, 106, 0.34), rgba(255, 228, 92, 0.3) 45%, rgba(141, 255, 106, 0.28)),
-    #050609;
-  box-shadow: inset 0 0 7px rgba(0, 0, 0, 0.9);
-}
-
-.hermes-amp-eq-range::-webkit-slider-thumb {
-  width: 16px;
-  height: 6px;
-  border: 1px solid rgba(0, 0, 0, 0.78);
-  background: linear-gradient(180deg, #ffe878, #c78518 52%, #4c2e07);
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.52),
-    0 0 5px rgba(255, 216, 106, 0.22);
-}
-
-.hermes-amp-eq-range:focus-visible {
+.hermes-amp-eq-slider:focus-within::before {
   outline: 1px solid rgba(141, 255, 106, 0.82);
   outline-offset: 2px;
 }
@@ -722,6 +747,8 @@
 }
 
 .hermes-amp-eq-slider-label {
+  position: relative;
+  z-index: 3;
   color: rgba(216, 230, 255, 0.66);
   font-size: 6px;
   line-height: 1;
@@ -729,6 +756,8 @@
 }
 
 .hermes-amp-eq-slider-value {
+  position: relative;
+  z-index: 3;
   color: #9cff75;
   font-size: 7px;
   line-height: 1;
