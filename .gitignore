@@ -1,0 +1,9 @@
+.DS_Store
+*.log
+node_modules/
+
+# Keep the source bundle plus the manifest-pinned cache-busted release asset.
+dashboard/dist/index.amp*.js
+!dashboard/dist/index.amp8.js
+dashboard/dist/style.amp*.css
+!dashboard/dist/style.amp8.css

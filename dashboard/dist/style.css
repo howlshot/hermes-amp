@@ -1,0 +1,1338 @@
+.hermes-amp-header-brand,
+.hermes-amp-header-status,
+.hermes-amp-footer,
+.hermes-amp-header-banner,
+.hermes-amp-page-banner,
+.hermes-amp-window,
+.hermes-amp-deck-window {
+  color: var(--color-card-foreground);
+  font-family: "MS Sans Serif", "Tahoma", var(--font-mono, "Share Tech Mono", ui-monospace, monospace);
+  letter-spacing: 0;
+}
+
+:root[data-layout-variant="cockpit"] main h1 {
+  margin-bottom: 8px;
+  color: #d8e6ff;
+  font-family: "MS Sans Serif", "Tahoma", var(--font-mono, ui-monospace, monospace);
+  font-size: 15px;
+  letter-spacing: 0;
+  text-shadow:
+    1px 1px 0 #000,
+    0 0 8px rgba(120, 196, 255, 0.22);
+}
+
+.hermes-amp-header-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+  height: 26px;
+  padding: 2px 8px 2px 5px;
+  border: 1px solid rgba(126, 190, 255, 0.36);
+  background:
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.035) 0 1px, transparent 1px 5px),
+    linear-gradient(180deg, #38404b, #141720 52%, #07090d);
+  box-shadow:
+    inset 1px 1px 0 rgba(255, 255, 255, 0.2),
+    inset -1px -1px 0 rgba(0, 0, 0, 0.85),
+    0 0 0 1px rgba(0, 0, 0, 0.88);
+}
+
+.hermes-amp-header-grip {
+  width: 16px;
+  height: 16px;
+  background:
+    repeating-linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.34) 0 1px,
+      transparent 1px 4px
+    );
+  opacity: 0.75;
+}
+
+.hermes-amp-header-sub {
+  color: #70c9ff;
+  font-size: 10px;
+}
+
+.hermes-amp-segment-text {
+  display: inline-block;
+  max-width: 100%;
+  overflow: hidden;
+  color: #9cff75;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-shadow:
+    0 0 4px rgba(141, 255, 106, 0.76),
+    0 0 12px rgba(141, 255, 106, 0.32);
+}
+
+.hermes-amp-header-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.hermes-amp-led-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  min-width: 0;
+  color: var(--color-muted-foreground);
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+.hermes-amp-led {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: #8dff6a;
+  box-shadow: 0 0 7px rgba(141, 255, 106, 0.82);
+}
+
+.hermes-amp-led.is-dim {
+  background: #ff566a;
+  box-shadow: 0 0 7px rgba(255, 86, 106, 0.68);
+}
+
+.hermes-amp-mini-display {
+  display: inline-block;
+  max-width: 130px;
+  overflow: hidden;
+  padding: 2px 7px;
+  border: 1px solid rgba(141, 255, 106, 0.26);
+  background: #071007;
+  color: #9cff75;
+  font-size: 11px;
+  line-height: 1.2;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  box-shadow: inset 0 0 16px rgba(141, 255, 106, 0.12);
+}
+
+.hermes-amp-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  min-width: 0;
+  padding: 3px;
+}
+
+.hermes-amp-window {
+  min-width: 0;
+  border: 1px solid rgba(126, 190, 255, 0.28);
+  background:
+    linear-gradient(180deg, rgba(49, 55, 65, 0.98), rgba(11, 13, 18, 0.98));
+  box-shadow:
+    inset 1px 1px 0 rgba(255, 255, 255, 0.16),
+    inset -1px -1px 0 rgba(0, 0, 0, 0.88),
+    0 0 0 1px #030407;
+}
+
+.hermes-amp-titlebar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 17px;
+  padding: 2px 5px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.86);
+  background:
+    linear-gradient(90deg, rgba(112, 201, 255, 0.28), transparent 18%),
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.08) 0 1px, transparent 1px 3px),
+    linear-gradient(180deg, #333946, #171a22 52%, #08090d);
+  color: #d8e6ff;
+  font-family: "MS Sans Serif", "Tahoma", sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  line-height: 1.1;
+  text-shadow: 1px 1px 0 #000;
+  white-space: nowrap;
+}
+
+.hermes-amp-window-buttons {
+  display: inline-block;
+  width: 29px;
+  height: 9px;
+  overflow: hidden;
+  color: transparent;
+  font-size: 0;
+  background:
+    linear-gradient(180deg, #c9d6e5, #59606b 52%, #16191f) 0 0 / 8px 9px no-repeat,
+    linear-gradient(180deg, #c9d6e5, #59606b 52%, #16191f) 10px 0 / 8px 9px no-repeat,
+    linear-gradient(180deg, #ffd86a, #80520f 52%, #171007) 20px 0 / 8px 9px no-repeat;
+  box-shadow:
+    inset 1px 1px 0 rgba(255, 255, 255, 0.34),
+    inset -1px -1px 0 rgba(0, 0, 0, 0.86);
+}
+
+.hermes-amp-display {
+  display: grid;
+  gap: 3px;
+  min-width: 0;
+  padding: 8px;
+  background:
+    linear-gradient(rgba(141, 255, 106, 0.035) 50%, transparent 50%),
+    #071007;
+  background-size: 100% 4px;
+  border-top: 1px solid rgba(0, 0, 0, 0.8);
+  box-shadow: inset 0 0 22px rgba(141, 255, 106, 0.12);
+}
+
+.hermes-amp-display-sub {
+  color: rgba(215, 227, 202, 0.72);
+  font-size: 11px;
+}
+
+.hermes-amp-eq {
+  display: flex;
+  align-items: end;
+  gap: 2px;
+  height: 52px;
+  padding: 5px;
+  border: 1px solid rgba(141, 255, 106, 0.18);
+  background: #08090d;
+  box-shadow: inset 0 0 16px rgba(141, 255, 106, 0.08);
+}
+
+.hermes-amp-eq-bar {
+  flex: 1 1 0;
+  min-width: 3px;
+  background: linear-gradient(180deg, #ff566a 0%, #ffe45c 48%, #8dff6a 100%);
+  box-shadow: 0 0 6px rgba(141, 255, 106, 0.18);
+  transform-origin: bottom;
+}
+
+.hermes-amp-spectrum {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  height: 42px;
+  min-width: 120px;
+  overflow: hidden;
+  padding: 0;
+  border: 1px solid rgba(141, 255, 106, 0.2);
+  background:
+    linear-gradient(90deg, rgba(141, 255, 106, 0.04) 1px, transparent 1px),
+    linear-gradient(rgba(141, 255, 106, 0.035) 50%, transparent 50%),
+    #07090b;
+  background-size: 18px 100%, 100% 6px, 100% 100%;
+  box-shadow:
+    inset 0 0 18px rgba(141, 255, 106, 0.12),
+    inset 1px 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.hermes-amp-spectrum.is-idle {
+  border-color: rgba(255, 228, 92, 0.18);
+  box-shadow: inset 0 0 18px rgba(255, 228, 92, 0.08);
+}
+
+.hermes-amp-spectrum-bars {
+  position: absolute;
+  inset: 16px 5px 5px;
+  z-index: 1;
+  display: flex;
+  align-items: end;
+  gap: 2px;
+  min-width: 0;
+}
+
+.hermes-amp-spectrum-caption {
+  position: absolute;
+  top: 4px;
+  right: 5px;
+  left: 5px;
+  z-index: 3;
+  overflow: hidden;
+  color: #9cff75;
+  font-size: 8px;
+  line-height: 1;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-shadow: 0 0 6px rgba(141, 255, 106, 0.58);
+}
+
+.hermes-amp-spectrum-line {
+  position: absolute;
+  inset: 14px 4px 4px;
+  z-index: 2;
+  width: calc(100% - 8px);
+  height: calc(100% - 18px);
+  overflow: visible;
+  pointer-events: none;
+}
+
+.hermes-amp-spectrum-area {
+  fill: rgba(141, 255, 106, 0.07);
+}
+
+.hermes-amp-spectrum-trace {
+  fill: none;
+  stroke: #9cff75;
+  stroke-linecap: square;
+  stroke-linejoin: bevel;
+  stroke-width: 2;
+  filter: drop-shadow(0 0 5px rgba(141, 255, 106, 0.56));
+}
+
+.hermes-amp-spectrum-bar {
+  box-sizing: border-box;
+  flex: 1 1 0;
+  min-width: 3px;
+  background: linear-gradient(180deg, #ff566a 0%, #ffe45c 48%, #8dff6a 100%);
+  box-shadow: 0 0 7px rgba(141, 255, 106, 0.2);
+  transform-origin: bottom;
+  max-height: 100%;
+}
+
+.hermes-amp-spectrum-bar.is-preview {
+  background: linear-gradient(180deg, rgba(255, 228, 92, 0.5), rgba(141, 255, 106, 0.36));
+  opacity: 0.72;
+}
+
+.hermes-amp-meter-row {
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr) 34px;
+  align-items: center;
+  gap: 6px;
+  padding: 6px;
+  font-size: 11px;
+}
+
+.hermes-amp-meter-label,
+.hermes-amp-meter-value {
+  color: var(--color-muted-foreground);
+  white-space: nowrap;
+}
+
+.hermes-amp-meter-value {
+  text-align: right;
+}
+
+.hermes-amp-meter-track {
+  height: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: #07080b;
+  box-shadow: inset 0 0 7px rgba(0, 0, 0, 0.82);
+}
+
+.hermes-amp-meter-fill {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, #8dff6a, #ffe45c 60%, #ff8c28);
+}
+
+.hermes-amp-playlist {
+  display: grid;
+  gap: 1px;
+  margin: 0;
+  padding: 5px;
+  list-style: none;
+}
+
+.hermes-amp-playlist li {
+  display: grid;
+  grid-template-columns: 26px minmax(0, 1fr);
+  gap: 6px;
+  min-width: 0;
+  padding: 3px 4px;
+  background: rgba(255, 255, 255, 0.035);
+  font-size: 11px;
+}
+
+.hermes-amp-playlist li:nth-child(odd) {
+  background: rgba(255, 158, 46, 0.055);
+}
+
+.hermes-amp-playlist li.is-empty {
+  color: var(--color-muted-foreground);
+}
+
+.hermes-amp-track-index {
+  color: #ffd86a;
+}
+
+.hermes-amp-track-title {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.hermes-amp-footer {
+  display: inline-flex;
+  align-items: center;
+  max-width: min(68vw, 520px);
+  overflow: hidden;
+  color: #9cff75;
+  font-size: 11px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.hermes-amp-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 102;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04), transparent 16%, transparent 84%, rgba(0, 0, 0, 0.2)),
+    repeating-linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.018) 0 1px,
+      transparent 1px 7px
+    );
+  opacity: 0.22;
+}
+
+.hermes-amp-header-banner {
+  display: grid;
+  grid-template-columns: auto minmax(88px, auto) minmax(170px, 1fr) minmax(160px, auto);
+  align-items: center;
+  gap: 7px;
+  min-width: 0;
+  margin-bottom: 8px;
+  padding: 5px 8px;
+  border: 1px solid rgba(126, 190, 255, 0.28);
+  background:
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.035) 0 1px, transparent 1px 5px),
+    linear-gradient(180deg, rgba(41, 47, 58, 0.97), rgba(7, 8, 12, 0.97));
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.14),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.8);
+}
+
+.hermes-amp-transport {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(54px, 1fr));
+  gap: 3px;
+  width: 100%;
+  min-width: 0;
+}
+
+.hermes-amp-transport a,
+.hermes-amp-transport button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  height: 23px;
+  min-width: 54px;
+  padding: 0 5px;
+  border: 1px solid rgba(126, 190, 255, 0.18);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.11), transparent 45%),
+    linear-gradient(180deg, #3a414d, #161920 54%, #090a0e);
+  color: #ffe45c;
+  cursor: pointer;
+  font-family: "MS Sans Serif", "Tahoma", sans-serif;
+  font-size: 9px;
+  line-height: 1;
+  text-decoration: none;
+  box-shadow:
+    inset 1px 1px 0 rgba(255, 255, 255, 0.18),
+    inset -1px -1px 0 rgba(0, 0, 0, 0.82);
+}
+
+.hermes-amp-transport button {
+  font-family: inherit;
+}
+
+.hermes-amp-transport span {
+  color: #70c9ff;
+  font-size: 9px;
+  line-height: 1;
+}
+
+.hermes-amp-transport strong {
+  color: inherit;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 1;
+}
+
+.hermes-amp-transport a:hover,
+.hermes-amp-transport button:hover,
+.hermes-amp-transport a:focus-visible,
+.hermes-amp-transport button:focus-visible {
+  border-color: rgba(112, 201, 255, 0.7);
+  color: #9cff75;
+  outline: none;
+  box-shadow:
+    inset 1px 1px 0 rgba(255, 255, 255, 0.22),
+    inset -1px -1px 0 rgba(0, 0, 0, 0.82),
+    0 0 8px rgba(112, 201, 255, 0.28);
+}
+
+.hermes-amp-header-banner-title {
+  color: #d8e6ff;
+  font-size: 10px;
+  white-space: nowrap;
+}
+
+.hermes-amp-header-banner-copy {
+  overflow: hidden;
+  color: #9cff75;
+  font-size: 11px;
+  text-align: right;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.hermes-amp-page-banner {
+  display: grid;
+  grid-template-columns: minmax(110px, 180px) minmax(140px, 1fr) minmax(160px, 280px);
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  padding: 6px 8px;
+  border: 1px solid rgba(126, 190, 255, 0.28);
+  background:
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.035) 0 1px, transparent 1px 5px),
+    linear-gradient(180deg, rgba(35, 42, 52, 0.96), rgba(8, 9, 13, 0.96));
+  box-shadow:
+    inset 1px 1px 0 rgba(255, 255, 255, 0.13),
+    inset -1px -1px 0 rgba(0, 0, 0, 0.78);
+}
+
+.hermes-amp-page-banner .hermes-amp-spectrum {
+  height: 30px;
+  padding: 3px;
+}
+
+.hermes-amp-header-banner .hermes-amp-spectrum-caption,
+.hermes-amp-page-banner .hermes-amp-spectrum-caption {
+  display: none;
+}
+
+.hermes-amp-header-banner .hermes-amp-spectrum-bars,
+.hermes-amp-page-banner .hermes-amp-spectrum-bars {
+  inset: 4px;
+}
+
+.hermes-amp-header-banner .hermes-amp-spectrum-line,
+.hermes-amp-page-banner .hermes-amp-spectrum-line {
+  inset: 3px;
+  width: calc(100% - 6px);
+  height: calc(100% - 6px);
+}
+
+.hermes-amp-page-banner-title {
+  color: #d8e6ff;
+  font-size: 10px;
+  white-space: nowrap;
+}
+
+.hermes-amp-page-banner-copy {
+  overflow: hidden;
+  color: var(--color-muted-foreground);
+  font-size: 11px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.hermes-amp-sessions-deck {
+  display: grid;
+  grid-template-columns: minmax(260px, 1.35fr) minmax(170px, 0.75fr);
+  grid-template-areas:
+    "main eq"
+    "playlist meters";
+  gap: 8px;
+  margin-top: 8px;
+  margin-bottom: 12px;
+}
+
+.hermes-amp-deck-window {
+  min-width: 0;
+  border: 1px solid rgba(126, 190, 255, 0.28);
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.045), transparent 30%),
+    linear-gradient(180deg, rgba(48, 54, 64, 0.99), rgba(9, 10, 14, 0.99));
+  box-shadow:
+    inset 1px 1px 0 rgba(255, 255, 255, 0.2),
+    inset -1px -1px 0 rgba(0, 0, 0, 0.9),
+    0 0 0 1px #030407,
+    4px 7px 0 rgba(0, 0, 0, 0.18);
+}
+
+.hermes-amp-deck-window.is-main-player {
+  grid-area: main;
+}
+
+.hermes-amp-deck-window.is-equalizer {
+  grid-area: eq;
+}
+
+.hermes-amp-deck-window.is-playlist {
+  grid-area: playlist;
+}
+
+.hermes-amp-deck-window.is-meters {
+  grid-area: meters;
+}
+
+.hermes-amp-deck-titlebar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 17px;
+  padding: 2px 5px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.88);
+  background:
+    linear-gradient(90deg, rgba(112, 201, 255, 0.28), transparent 18%),
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.075) 0 1px, transparent 1px 3px),
+    linear-gradient(180deg, #373d49, #181b23 52%, #07090d);
+  color: #d8e6ff;
+  font-family: "MS Sans Serif", "Tahoma", sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  line-height: 1;
+  text-shadow: 1px 1px 0 #000;
+}
+
+.hermes-amp-main-player-grid {
+  display: grid;
+  grid-template-columns: minmax(160px, 1fr) minmax(180px, 1.1fr);
+  grid-template-areas:
+    "readout spectrum"
+    "transport spectrum";
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+}
+
+.hermes-amp-deck-readout {
+  grid-area: readout;
+  display: grid;
+  gap: 2px;
+  min-width: 0;
+  padding: 7px;
+  border: 1px solid rgba(141, 255, 106, 0.25);
+  background:
+    linear-gradient(rgba(141, 255, 106, 0.04) 50%, transparent 50%),
+    linear-gradient(90deg, rgba(112, 201, 255, 0.06), transparent 34%),
+    #061006;
+  background-size: 100% 4px;
+  box-shadow:
+    inset 0 0 20px rgba(141, 255, 106, 0.14),
+    0 0 0 1px rgba(0, 0, 0, 0.9);
+}
+
+.hermes-amp-main-player-grid > .hermes-amp-spectrum {
+  grid-area: spectrum;
+  height: 50px;
+}
+
+.hermes-amp-main-player-grid > .hermes-amp-transport {
+  grid-area: transport;
+}
+
+.hermes-amp-deck-readout span:last-child {
+  overflow: hidden;
+  color: rgba(215, 227, 202, 0.72);
+  font-size: 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.hermes-amp-eq-sliders {
+  display: grid;
+  grid-template-columns: repeat(10, minmax(12px, 1fr));
+  gap: 2px;
+  padding: 7px 6px 4px;
+  min-height: 114px;
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+  background:
+    linear-gradient(180deg, rgba(255, 86, 106, 0.1), transparent 28%),
+    linear-gradient(180deg, transparent 42%, rgba(141, 255, 106, 0.08)),
+    #080a0e;
+}
+
+.hermes-amp-eq-panel {
+  display: grid;
+  gap: 4px;
+}
+
+.hermes-amp-eq-slider {
+  display: grid;
+  grid-template-rows: 1fr auto auto;
+  gap: 2px;
+  justify-items: center;
+  min-width: 0;
+}
+
+.hermes-amp-eq-range {
+  width: 16px;
+  height: 80px;
+  margin: 0;
+  cursor: pointer;
+  accent-color: #70c9ff;
+  writing-mode: vertical-lr;
+  direction: rtl;
+}
+
+.hermes-amp-eq-range::-webkit-slider-runnable-track {
+  width: 8px;
+  border: 1px solid rgba(126, 190, 255, 0.22);
+  background:
+    linear-gradient(180deg, rgba(255, 86, 106, 0.34), rgba(255, 228, 92, 0.3) 45%, rgba(141, 255, 106, 0.28)),
+    #050609;
+  box-shadow: inset 0 0 7px rgba(0, 0, 0, 0.9);
+}
+
+.hermes-amp-eq-range::-webkit-slider-thumb {
+  width: 16px;
+  height: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.78);
+  background: linear-gradient(180deg, #ffe878, #c78518 52%, #4c2e07);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.52),
+    0 0 5px rgba(255, 216, 106, 0.22);
+}
+
+.hermes-amp-eq-range:focus-visible {
+  outline: 1px solid rgba(141, 255, 106, 0.82);
+  outline-offset: 2px;
+}
+
+.hermes-amp-eq-slider-rail {
+  position: relative;
+  width: 8px;
+  min-height: 78px;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  background:
+    linear-gradient(180deg, rgba(255, 86, 106, 0.28), rgba(255, 228, 92, 0.22) 45%, rgba(141, 255, 106, 0.2)),
+    #07080b;
+  box-shadow: inset 0 0 7px rgba(0, 0, 0, 0.85);
+}
+
+.hermes-amp-eq-slider-thumb {
+  position: absolute;
+  left: 50%;
+  width: 18px;
+  height: 5px;
+  transform: translateX(-50%);
+  background: linear-gradient(180deg, #ffe45c, #ff8c28);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.38),
+    0 0 6px rgba(255, 158, 46, 0.34);
+}
+
+.hermes-amp-eq-slider-label {
+  color: rgba(216, 230, 255, 0.66);
+  font-size: 6px;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.hermes-amp-eq-slider-value {
+  color: #9cff75;
+  font-size: 7px;
+  line-height: 1;
+}
+
+.hermes-amp-eq-presets {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 3px;
+  padding: 0 7px 7px;
+  background: #080a0e;
+}
+
+.hermes-amp-eq-presets button {
+  min-width: 0;
+  height: 18px;
+  border: 1px solid rgba(126, 190, 255, 0.18);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.1), transparent 45%),
+    linear-gradient(180deg, #3b424e, #151820 54%, #08090d);
+  color: #ffe45c;
+  cursor: pointer;
+  font-family: inherit;
+  font-family: "MS Sans Serif", "Tahoma", sans-serif;
+  font-size: 8px;
+  line-height: 1;
+  box-shadow:
+    inset 1px 1px 0 rgba(255, 255, 255, 0.16),
+    inset -1px -1px 0 rgba(0, 0, 0, 0.8);
+}
+
+.hermes-amp-eq-presets button:hover,
+.hermes-amp-eq-presets button:focus-visible {
+  border-color: rgba(141, 255, 106, 0.58);
+  color: #9cff75;
+  outline: none;
+}
+
+.hermes-amp-deck-playlist {
+  display: grid;
+  gap: 0;
+  margin: 0;
+  padding: 5px;
+  list-style: none;
+  background:
+    linear-gradient(rgba(141, 255, 106, 0.03) 50%, transparent 50%),
+    #080a0e;
+  background-size: 100% 20px;
+}
+
+.hermes-amp-deck-playlist li {
+  min-width: 0;
+  border-bottom: 1px solid rgba(126, 190, 255, 0.055);
+  background: rgba(255, 255, 255, 0.025);
+  font-size: 10px;
+}
+
+.hermes-amp-deck-playlist li:nth-child(odd) {
+  background: rgba(112, 201, 255, 0.035);
+}
+
+.hermes-amp-deck-playlist li.is-active {
+  background: rgba(141, 255, 106, 0.12);
+  box-shadow: inset 2px 0 0 rgba(141, 255, 106, 0.82);
+}
+
+.hermes-amp-deck-playlist li > button {
+  display: grid;
+  grid-template-columns: 24px minmax(0, 1fr) 35px;
+  gap: 5px;
+  align-items: center;
+  width: 100%;
+  min-height: 24px;
+  padding: 3px 5px;
+}
+
+.hermes-amp-deck-playlist li > button {
+  border: 0;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  text-align: left;
+}
+
+.hermes-amp-deck-playlist li > button:disabled {
+  cursor: default;
+  opacity: 0.58;
+}
+
+.hermes-amp-deck-playlist li > button:hover,
+.hermes-amp-deck-playlist li > button:focus-visible {
+  color: #9cff75;
+  outline: none;
+}
+
+.hermes-amp-track-meta {
+  color: rgba(112, 201, 255, 0.72);
+  text-align: right;
+  white-space: nowrap;
+}
+
+.hermes-amp-stat-tiles {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 4px;
+  padding: 5px;
+  background: #080a0e;
+}
+
+.hermes-amp-stat-tile {
+  display: grid;
+  gap: 3px;
+  min-width: 0;
+  padding: 5px;
+  border: 1px solid rgba(141, 255, 106, 0.16);
+  background:
+    linear-gradient(rgba(141, 255, 106, 0.035) 50%, transparent 50%),
+    rgba(7, 16, 7, 0.78);
+  background-size: 100% 4px;
+  box-shadow: inset 0 0 14px rgba(141, 255, 106, 0.08);
+}
+
+.hermes-amp-stat-tile span {
+  color: rgba(215, 227, 202, 0.62);
+  font-size: 9px;
+}
+
+.hermes-amp-stat-tile strong {
+  overflow: hidden;
+  color: #9cff75;
+  font-size: 13px;
+  font-weight: 400;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.hermes-amp-meter-stack {
+  padding-bottom: 3px;
+}
+
+.hermes-amp-desktop-page {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(230px, 0.86fr) minmax(285px, 1.18fr) minmax(220px, 0.86fr);
+  grid-template-rows: auto minmax(132px, auto) minmax(166px, auto) minmax(118px, auto);
+  grid-template-areas:
+    "top top top"
+    "playlist main eq"
+    "playlist main system"
+    "logs inspector system";
+  gap: 7px;
+  min-height: calc(100vh - 126px);
+  padding: 0 0 12px;
+}
+
+.hermes-amp-desktop-page::before {
+  content: "";
+  position: absolute;
+  inset: -10px;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 50% 30%, rgba(112, 201, 255, 0.1), transparent 24%),
+    repeating-linear-gradient(90deg, rgba(112, 201, 255, 0.035) 0 1px, transparent 1px 18px),
+    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.018) 0 1px, transparent 1px 18px);
+  opacity: 0.78;
+}
+
+.hermes-amp-desktop-topline {
+  grid-area: top;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  min-width: 0;
+  padding: 5px 8px;
+  border: 1px solid rgba(126, 190, 255, 0.3);
+  background:
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.04) 0 1px, transparent 1px 5px),
+    linear-gradient(180deg, rgba(41, 47, 58, 0.98), rgba(7, 8, 12, 0.98));
+  color: #9cff75;
+  font-family: "MS Sans Serif", "Tahoma", var(--font-mono, ui-monospace, monospace);
+  font-size: 11px;
+  box-shadow:
+    inset 1px 1px 0 rgba(255, 255, 255, 0.14),
+    inset -1px -1px 0 rgba(0, 0, 0, 0.86),
+    0 0 0 1px #030407;
+}
+
+.hermes-amp-desktop-topline span:last-child {
+  overflow: hidden;
+  text-align: right;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.hermes-amp-deck-window.is-desktop-main {
+  grid-area: main;
+  align-self: start;
+}
+
+.hermes-amp-deck-window.is-desktop-playlist {
+  grid-area: playlist;
+}
+
+.hermes-amp-deck-window.is-desktop-eq {
+  grid-area: eq;
+}
+
+.hermes-amp-deck-window.is-desktop-system {
+  grid-area: system;
+}
+
+.hermes-amp-deck-window.is-desktop-logs {
+  grid-area: logs;
+}
+
+.hermes-amp-deck-window.is-desktop-inspector {
+  grid-area: inspector;
+}
+
+.hermes-amp-desktop-player {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-areas:
+    "readout"
+    "spectrum"
+    "transport";
+  gap: 6px;
+  min-width: 0;
+  padding: 7px;
+}
+
+.hermes-amp-desktop-player > .hermes-amp-deck-readout {
+  grid-area: readout;
+}
+
+.hermes-amp-desktop-player .hermes-amp-spectrum {
+  grid-area: spectrum;
+  height: 86px;
+  min-width: 0;
+}
+
+.hermes-amp-desktop-player .hermes-amp-transport {
+  grid-area: transport;
+  grid-template-columns: repeat(auto-fit, minmax(54px, 1fr));
+  min-width: 0;
+}
+
+.hermes-amp-desktop-player .hermes-amp-transport a,
+.hermes-amp-desktop-player .hermes-amp-transport button {
+  height: 25px;
+}
+
+.hermes-amp-log-lines {
+  display: grid;
+  gap: 1px;
+  margin: 0;
+  padding: 5px;
+  list-style: none;
+  color: rgba(215, 227, 202, 0.74);
+  font-size: 10px;
+  background: #080a0e;
+}
+
+.hermes-amp-log-lines li {
+  overflow: hidden;
+  padding: 3px 4px;
+  border-bottom: 1px solid rgba(126, 190, 255, 0.055);
+  background: rgba(255, 255, 255, 0.026);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.hermes-amp-log-lines li:nth-child(odd) {
+  background: rgba(112, 201, 255, 0.03);
+}
+
+.hermes-amp-inspector {
+  display: grid;
+  gap: 5px;
+  padding: 7px;
+  color: rgba(231, 239, 220, 0.78);
+  font-size: 10px;
+  background:
+    linear-gradient(rgba(141, 255, 106, 0.025) 50%, transparent 50%),
+    #080a0e;
+  background-size: 100% 18px;
+}
+
+.hermes-amp-inspector.is-empty {
+  position: relative;
+  align-content: center;
+  min-height: 126px;
+  text-align: center;
+}
+
+.hermes-amp-inspector.is-empty::before {
+  content: "";
+  position: absolute;
+  inset: 7px;
+  pointer-events: none;
+  border: 1px solid rgba(126, 190, 255, 0.12);
+  background:
+    repeating-linear-gradient(0deg, transparent 0 17px, rgba(126, 190, 255, 0.07) 17px 18px);
+}
+
+.hermes-amp-inspector > p {
+  margin: 0;
+  color: rgba(215, 227, 202, 0.68);
+  line-height: 1.35;
+}
+
+.hermes-amp-inspector-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 5px;
+}
+
+.hermes-amp-inspector-grid span {
+  display: grid;
+  gap: 2px;
+  min-width: 0;
+  padding: 5px;
+  border: 1px solid rgba(141, 255, 106, 0.16);
+  background: rgba(7, 16, 7, 0.72);
+}
+
+.hermes-amp-inspector-grid em {
+  color: rgba(215, 227, 202, 0.58);
+  font-style: normal;
+  font-size: 8px;
+}
+
+.hermes-amp-inspector-grid strong,
+.hermes-amp-inspector > strong {
+  overflow: hidden;
+  color: #9cff75;
+  font-weight: 400;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.hermes-amp-inspector-actions {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 3px;
+}
+
+.hermes-amp-inspector-actions a,
+.hermes-amp-inspector-actions button,
+.hermes-amp-inspector.is-empty a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 22px;
+  border: 1px solid rgba(126, 190, 255, 0.18);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.1), transparent 45%),
+    linear-gradient(180deg, #3b424e, #151820 54%, #08090d);
+  color: #ffe45c;
+  cursor: pointer;
+  font-family: inherit;
+  font-family: "MS Sans Serif", "Tahoma", sans-serif;
+  font-size: 8px;
+  line-height: 1;
+  text-decoration: none;
+  box-shadow:
+    inset 1px 1px 0 rgba(255, 255, 255, 0.16),
+    inset -1px -1px 0 rgba(0, 0, 0, 0.8);
+}
+
+.hermes-amp-inspector-actions .is-danger {
+  color: #ff9aa6;
+}
+
+.hermes-amp-inspector-actions a:hover,
+.hermes-amp-inspector-actions button:hover,
+.hermes-amp-inspector-actions a:focus-visible,
+.hermes-amp-inspector-actions button:focus-visible,
+.hermes-amp-inspector.is-empty a:hover,
+.hermes-amp-inspector.is-empty a:focus-visible {
+  border-color: rgba(141, 255, 106, 0.58);
+  color: #9cff75;
+  outline: none;
+}
+
+.hermes-amp-inspector-error {
+  padding: 5px;
+  border: 1px solid rgba(255, 86, 106, 0.32);
+  color: #ff9aa6;
+  background: rgba(255, 86, 106, 0.08);
+}
+
+.hermes-amp-transcript {
+  display: grid;
+  gap: 4px;
+  max-height: 154px;
+  overflow: auto;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.hermes-amp-transcript li {
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr);
+  gap: 5px;
+  padding: 4px;
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.hermes-amp-transcript span {
+  color: #ff9e2e;
+}
+
+.hermes-amp-transcript p {
+  overflow: hidden;
+  margin: 0;
+  color: rgba(231, 239, 220, 0.72);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+:root[data-layout-variant="cockpit"] main p {
+  color: rgba(231, 239, 220, 0.76);
+}
+
+:root[data-layout-variant="cockpit"] main [class*="text-muted-foreground"] {
+  color: rgba(214, 226, 204, 0.68);
+}
+
+@media (max-width: 720px) {
+  .hermes-amp-header-sub,
+  .hermes-amp-led-label {
+    display: none;
+  }
+
+  .hermes-amp-mini-display {
+    max-width: 82px;
+  }
+
+  .hermes-amp-page-banner {
+    grid-template-columns: 1fr;
+  }
+
+  .hermes-amp-header-banner {
+    grid-template-columns: 1fr;
+  }
+
+  .hermes-amp-transport {
+    display: inline-grid;
+    grid-template-columns: repeat(2, minmax(54px, 1fr));
+  }
+
+  .hermes-amp-header-banner-copy {
+    text-align: left;
+    white-space: normal;
+  }
+
+  .hermes-amp-page-banner-copy {
+    white-space: normal;
+  }
+
+  .hermes-amp-sessions-deck {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "main"
+      "eq"
+      "playlist"
+      "meters";
+  }
+
+  .hermes-amp-main-player-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "readout"
+      "spectrum"
+      "transport";
+  }
+
+  .hermes-amp-main-player-grid .hermes-amp-transport {
+    width: 100%;
+  }
+
+  .hermes-amp-desktop-page {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "top"
+      "main"
+      "eq"
+      "playlist"
+      "system"
+      "logs"
+      "inspector";
+    min-height: 0;
+  }
+
+  .hermes-amp-desktop-topline {
+    display: grid;
+  }
+
+  .hermes-amp-desktop-topline span:last-child {
+    text-align: left;
+  }
+}
+
+@media (min-width: 1080px) {
+  .hermes-amp-desktop-player {
+    grid-template-columns: minmax(0, 1fr) minmax(136px, 0.75fr);
+    grid-template-areas:
+      "readout spectrum"
+      "transport spectrum";
+    align-items: stretch;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .hermes-amp-eq-bar {
+    animation: hermes-amp-eq 950ms steps(4, end) infinite alternate;
+  }
+
+  .hermes-amp-spectrum-bar {
+    animation: hermes-amp-spectrum var(--amp-speed, 1050ms) steps(4, end) infinite alternate;
+  }
+
+  .hermes-amp-spectrum-bar.is-preview {
+    animation-name: hermes-amp-preview-spectrum;
+    animation-duration: calc(var(--amp-speed, 1050ms) * 1.18);
+    animation-timing-function: steps(5, end);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+
+  .hermes-amp-spectrum-trace {
+    animation: hermes-amp-chart-trace calc(var(--amp-speed, 1050ms) * 1.4) linear infinite;
+    stroke-dasharray: 16 8;
+  }
+
+  .hermes-amp-eq-bar:nth-child(2n) {
+    animation-duration: 730ms;
+  }
+
+  .hermes-amp-eq-bar:nth-child(3n) {
+    animation-duration: 1180ms;
+  }
+
+  .hermes-amp-spectrum-bar:nth-child(2n) {
+    animation-duration: calc(var(--amp-speed, 1050ms) * 0.78);
+  }
+
+  .hermes-amp-spectrum-bar:nth-child(3n) {
+    animation-duration: calc(var(--amp-speed, 1050ms) * 1.2);
+  }
+
+  .hermes-amp-spectrum-bar.is-preview:nth-child(2n) {
+    animation-duration: calc(var(--amp-speed, 1050ms) * 0.94);
+  }
+
+  .hermes-amp-spectrum-bar.is-preview:nth-child(3n) {
+    animation-duration: calc(var(--amp-speed, 1050ms) * 1.62);
+  }
+
+  @keyframes hermes-amp-eq {
+    from {
+      transform: scaleY(0.72);
+    }
+
+    to {
+      transform: scaleY(1);
+    }
+  }
+
+  @keyframes hermes-amp-spectrum {
+    from {
+      transform: scaleY(0.86);
+    }
+
+    to {
+      transform: scaleY(1);
+    }
+  }
+
+  @keyframes hermes-amp-preview-spectrum {
+    from {
+      opacity: 0.38;
+      transform: scaleY(0.42);
+    }
+
+    to {
+      opacity: 0.86;
+      transform: scaleY(0.98);
+    }
+  }
+
+  @keyframes hermes-amp-chart-trace {
+    from {
+      stroke-dashoffset: 24;
+    }
+
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+}

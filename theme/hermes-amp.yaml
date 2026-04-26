@@ -1,0 +1,132 @@
+name: hermes-amp
+label: Hermes Amp
+description: Late-90s media-player chrome for the Hermes dashboard.
+
+palette:
+  background:
+    hex: "#050507"
+    alpha: 1.0
+  midground:
+    hex: "#d7e3ca"
+    alpha: 1.0
+  foreground:
+    hex: "#fff4b8"
+    alpha: 0.5
+  warmGlow: "rgba(255, 142, 32, 0.28)"
+  noiseOpacity: 0.95
+
+typography:
+  fontSans: '"Share Tech Mono", "IBM Plex Mono", ui-monospace, monospace'
+  fontMono: '"Share Tech Mono", "IBM Plex Mono", ui-monospace, monospace'
+  fontDisplay: '"Share Tech Mono", "IBM Plex Mono", ui-monospace, monospace'
+  fontUrl: "https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap"
+  baseSize: "14px"
+  lineHeight: "1.45"
+  letterSpacing: "0"
+
+layout:
+  radius: "0"
+  density: compact
+
+layoutVariant: cockpit
+
+componentStyles:
+  card:
+    background: "linear-gradient(180deg, rgba(42, 44, 48, 0.96), rgba(13, 14, 18, 0.96))"
+    boxShadow: "inset 1px 1px 0 rgba(255, 255, 255, 0.22), inset -1px -1px 0 rgba(0, 0, 0, 0.8), 0 12px 28px rgba(0, 0, 0, 0.38)"
+    borderColor: "rgba(255, 158, 46, 0.28)"
+  header:
+    background: "linear-gradient(180deg, #4d535c 0%, #25282f 42%, #111216 43%, #090a0d 100%)"
+    boxShadow: "inset 0 1px 0 rgba(255, 255, 255, 0.28), inset 0 -1px 0 rgba(0, 0, 0, 0.9), 0 10px 24px rgba(0, 0, 0, 0.42)"
+  sidebar:
+    background: "linear-gradient(180deg, rgba(33, 36, 42, 0.98), rgba(8, 9, 12, 0.98))"
+    boxShadow: "inset 1px 0 0 rgba(255, 255, 255, 0.16), inset -1px 0 0 rgba(0, 0, 0, 0.86)"
+  tab:
+    background: "linear-gradient(180deg, rgba(56, 59, 66, 0.95), rgba(18, 19, 24, 0.95))"
+    boxShadow: "inset 1px 1px 0 rgba(255, 255, 255, 0.18), inset -1px -1px 0 rgba(0, 0, 0, 0.75)"
+  footer:
+    background: "linear-gradient(180deg, rgba(18, 19, 24, 0.92), rgba(4, 5, 7, 0.95))"
+  badge:
+    background: "linear-gradient(180deg, rgba(255, 180, 55, 0.28), rgba(122, 70, 0, 0.22))"
+  progress:
+    background: "linear-gradient(90deg, #8dff6a, #ffe45c 58%, #ff8c28)"
+
+colorOverrides:
+  card: "#16181d"
+  cardForeground: "#e6efdc"
+  popover: "#101217"
+  popoverForeground: "#eef9df"
+  primary: "#ff9e2e"
+  primaryForeground: "#0b0c0f"
+  secondary: "#29303a"
+  secondaryForeground: "#d7e3ca"
+  muted: "#242832"
+  mutedForeground: "#91a086"
+  accent: "#8dff6a"
+  accentForeground: "#090b08"
+  destructive: "#ff566a"
+  destructiveForeground: "#090b08"
+  success: "#8dff6a"
+  warning: "#ffe45c"
+  border: "rgba(255, 158, 46, 0.28)"
+  input: "rgba(255, 255, 255, 0.14)"
+  ring: "#8dff6a"
+
+customCSS: |
+  :root[data-layout-variant="cockpit"] body {
+    background:
+      linear-gradient(90deg, rgba(255, 255, 255, 0.018) 1px, transparent 1px),
+      linear-gradient(180deg, rgba(255, 255, 255, 0.012) 1px, transparent 1px),
+      #050507;
+    background-size: 8px 8px, 8px 8px, auto;
+  }
+
+  :root[data-layout-variant="cockpit"] body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    pointer-events: none;
+    background:
+      repeating-linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.03) 0px,
+        rgba(255, 255, 255, 0.03) 1px,
+        transparent 1px,
+        transparent 4px
+      );
+    mix-blend-mode: soft-light;
+    opacity: 0.58;
+  }
+
+  :root[data-layout-variant="cockpit"] body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 99;
+    pointer-events: none;
+    background:
+      radial-gradient(circle at 24% 12%, rgba(255, 158, 46, 0.16), transparent 22%),
+      linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.44) 100%);
+  }
+
+  :root[data-layout-variant="cockpit"] button,
+  :root[data-layout-variant="cockpit"] input,
+  :root[data-layout-variant="cockpit"] select,
+  :root[data-layout-variant="cockpit"] textarea {
+    border-radius: 0;
+  }
+
+  :root[data-layout-variant="cockpit"] .font-mono {
+    text-shadow: 0 0 8px rgba(141, 255, 106, 0.2);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    :root[data-layout-variant="cockpit"] *,
+    :root[data-layout-variant="cockpit"] *::before,
+    :root[data-layout-variant="cockpit"] *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }

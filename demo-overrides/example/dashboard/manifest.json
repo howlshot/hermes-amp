@@ -1,0 +1,14 @@
+{
+  "name": "example",
+  "label": "Example",
+  "description": "No-op shadow used by Hermes Amp demos to hide the bundled example banner.",
+  "icon": "Sparkles",
+  "version": "0.0.0",
+  "tab": {
+    "path": "/example",
+    "position": "end",
+    "hidden": true
+  },
+  "slots": [],
+  "entry": "dist/index.js"
+}

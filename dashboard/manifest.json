@@ -1,0 +1,25 @@
+{
+  "name": "hermes-amp",
+  "label": "Hermes Amp",
+  "description": "Late-90s media-player dashboard chrome for Hermes.",
+  "icon": "Activity",
+  "version": "0.2.2",
+  "tab": {
+    "path": "/hermes-amp",
+    "position": "end",
+    "override": "/sessions",
+    "hidden": true
+  },
+  "slots": [
+    "header-left",
+    "header-right",
+    "pre-main",
+    "sidebar",
+    "footer-right",
+    "overlay",
+    "logs:top",
+    "sessions:top"
+  ],
+  "entry": "dist/index.amp8.js",
+  "css": "dist/style.amp8.css"
+}
