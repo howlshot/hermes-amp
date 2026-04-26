@@ -4,6 +4,6 @@ node_modules/
 
 # Keep the source bundle plus the manifest-pinned cache-busted release asset.
 dashboard/dist/index.amp*.js
-!dashboard/dist/index.amp13.js
+!dashboard/dist/index.amp14.js
 dashboard/dist/style.amp*.css
-!dashboard/dist/style.amp13.css
+!dashboard/dist/style.amp14.css
