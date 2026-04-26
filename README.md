@@ -23,7 +23,7 @@ The goal is not just a visual reskin. The Sessions page becomes a usable agent c
 - `dashboard/manifest.json` - hidden slot-only dashboard plugin.
 - `dashboard/dist/index.js` - SDK-based plugin bundle. No React build step required.
 - `dashboard/dist/style.css` - plugin-specific styling.
-- `dashboard/dist/index.amp11.js` and `dashboard/dist/style.amp11.css` - manifest-pinned cache-busted release assets.
+- `dashboard/dist/index.amp13.js` and `dashboard/dist/style.amp13.css` - manifest-pinned cache-busted release assets.
 - `demo-overrides/example` - a hidden no-op user plugin that shadows Hermes' bundled Example plugin so demo screenshots are clean.
 
 ## Dashboard Slots
@@ -88,7 +88,7 @@ These checks were used during development:
 
 ```sh
 node --check dashboard/dist/index.js
-node --check dashboard/dist/index.amp11.js
+node --check dashboard/dist/index.amp13.js
 jq . dashboard/manifest.json
 ruby -e 'require "yaml"; YAML.load_file("theme/hermes-amp.yaml")'
 ```
