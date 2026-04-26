@@ -8,6 +8,8 @@ The goal is not just a visual reskin. The Sessions page becomes a usable agent c
 
 - Replaces `/sessions` with a full media-player workspace.
 - Adds a functional `EQUALIZER` data mixer with persistent local settings.
+- Adds signal meters for health, token activity, API volume, cache reads, and log error pressure.
+- Adds a read-only `CRON DECK` for armed, due, paused, and failed scheduled jobs.
 - Turns the visualizer into a chart lens for `MSG`, `TOK`, `API`, `COST`, `LOG`, `ERR`, `WARN`, `CACHE`, and `RUNS`.
 - Uses `REC` to bias charts toward newer activity.
 - Shows a mixer-driven preview waveform when no matching live data exists yet.
@@ -21,7 +23,7 @@ The goal is not just a visual reskin. The Sessions page becomes a usable agent c
 - `dashboard/manifest.json` - hidden slot-only dashboard plugin.
 - `dashboard/dist/index.js` - SDK-based plugin bundle. No React build step required.
 - `dashboard/dist/style.css` - plugin-specific styling.
-- `dashboard/dist/index.amp9.js` and `dashboard/dist/style.amp9.css` - manifest-pinned cache-busted release assets.
+- `dashboard/dist/index.amp11.js` and `dashboard/dist/style.amp11.css` - manifest-pinned cache-busted release assets.
 - `demo-overrides/example` - a hidden no-op user plugin that shadows Hermes' bundled Example plugin so demo screenshots are clean.
 
 ## Dashboard Slots
@@ -42,7 +44,7 @@ If there is no matching live data yet, the chart switches to a mixer-driven prev
 
 ## Session Workspace
 
-The Sessions page is replaced by a Winamp-style workspace: main player, selectable playlist, functional equalizer, system meters, log tail, and a session inspector. The inspector can resume a session, load a transcript preview, and delete a session after explicit browser confirmation.
+The Sessions page is replaced by a Winamp-style workspace: main player, selectable playlist, functional equalizer, signal meters, cron deck, log tail, and a session inspector. The inspector can resume a session, load a transcript preview, and delete a session after explicit browser confirmation.
 
 The plugin overrides `/sessions`, so the Sessions nav item becomes the Hermes Amp workspace. The underlying data still comes from Hermes dashboard APIs.
 
@@ -86,7 +88,7 @@ These checks were used during development:
 
 ```sh
 node --check dashboard/dist/index.js
-node --check dashboard/dist/index.amp9.js
+node --check dashboard/dist/index.amp11.js
 jq . dashboard/manifest.json
 ruby -e 'require "yaml"; YAML.load_file("theme/hermes-amp.yaml")'
 ```
@@ -99,6 +101,7 @@ Live checks:
 - Confirm the `HERMES.AMP WORKSPACE` replaces the native Sessions page.
 - Confirm the mixer presets change the chart lens and visualizer shape.
 - Confirm `SESSION INSPECTOR` replaces redundant shortcut panels.
+- Confirm `CRON DECK` shows scheduled jobs or a no-job empty state.
 
 ## Design Notes
 
